@@ -1,0 +1,23 @@
+.news__item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.news__header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.news__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 250;
+    text-transform: uppercase;  
+
+}
+
+.news__article {
+    font-size: 24px;
+}

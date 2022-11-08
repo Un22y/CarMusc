@@ -1,0 +1,13 @@
+.decor__dots {
+    display:flex;
+    gap: 30px;
+}
+
+.decor__dot {
+    margin-top:10px;
+    background-color:#DB3138;
+    display: block;                                                         
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+}

@@ -1,0 +1,10 @@
+.postform__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.postform__info_link {
+    font-size: 16px;
+    text-transform: uppercase;
+}

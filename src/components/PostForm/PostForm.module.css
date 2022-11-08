@@ -1,0 +1,44 @@
+.postform__title {
+    font-size: 52px;
+}
+
+.postform__contacts {
+    height: 100%;
+    align-self: stretch;
+    display: flex;
+    gap: 25px;
+}
+
+
+.postform__questionandsocial {
+    align-self: stretch;
+    display: flex;
+    gap: 70px;
+}
+
+.social__link {
+    padding: 9px;
+    border: 1px solid #898989;
+    transition: .3s;
+}
+
+.social__link:hover {
+    transform: scale(1.1);
+    border-color: #DB3138;
+}
+
+.postform__send_box {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.postform__info_box {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 300px;
+}

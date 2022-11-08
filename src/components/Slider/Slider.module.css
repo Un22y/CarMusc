@@ -1,0 +1,23 @@
+
+
+.slider {
+    max-width: 1308px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider__container {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1472px) {
+    .slider {
+        max-width: 862px;
+    }    
+}
+
+@media screen and (max-width: 990px) {
+    .slider {
+        max-width: 416px;
+    }    
+}

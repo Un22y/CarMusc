@@ -1,0 +1,31 @@
+.slider__item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__text {
+    position: relative;
+    max-width: 286px;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.slider__text::after {
+    position: absolute;
+    top:-50%;
+    left:-10%;
+    content: '';
+    width: 120%;
+    height: 100%;
+    background-color: #DB3138;
+    z-index: -1;
+}
