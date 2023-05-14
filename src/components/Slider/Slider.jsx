@@ -1,37 +1,30 @@
-import React from "react";
-import { useState } from "react";
-import classes from "./Slider.module.css"
+import React, { useEffect, useState } from "react";
+import classes from "./Slider.module.css";
 import SliderList from "./SliderLIst/SliderList";
 
+const Slider = ({ count, itemWidth, list }) => {
+  const [Count, setCount] = useState(count);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleWindowResize = () => {
+      console.log(windowSize);
+      setWindowSize(window.innerWidth);
+      if (windowSize > 1472) return setCount(count === 1 ? 1 : 3);
+      if (windowSize <= 1472 && windowSize > 990)
+        return setCount(count === 1 ? 1 : 2);
+      if (windowSize <= 990) return setCount(count === 1 ? 1 : 1);
+    };
 
-const Slider = ({count, itemWidth, list}) => {
-    const [slides, setSlides] = useState(list)
-    const gap = 30;
+    window.addEventListener("resize", handleWindowResize);
+  }, [windowSize]);
 
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    
-    function moveList(direction) {
-        setSlides(slides.splice(direction).concat(slides))
-    }
-
-    return (
-        <section  className={classes.slider}>
-            <div className={classes.slider__container}>
-                <SliderList
-                    array={slides}
-                    count={count}
-                    itemWidth={itemWidth}
-                    gap={gap}
-                />
-            </div>
-        </section>
-    )
-}
+  return (
+    <section className={classes.slider}>
+      <div className={classes.slider__container}>
+        <SliderList array={list} count={Count} itemWidth={itemWidth} gap={30} />
+      </div>
+    </section>
+  );
+};
 
 export default Slider;
